@@ -22,7 +22,14 @@ const pageTitle = entry?.data?.title || 'Finnish Mechanical Keyboard Community';
 const pageDescription = entry?.data?.description || 'The hobby is great but the community makes it better.';
 ---
 
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta charset="utf-8" />
+<title>{pageTitle}</title>
+
+<!-- Standard SEO meta -->
+<meta name="description" content={pageDescription} />
+<link rel="canonical" href={Astro.url.href} />
+<meta name="author" content="Finnish Mechanical Keyboard Community" />
 
 <!-- Add your Open Graph tags -->
 <meta property="og:title" content={pageTitle} />
@@ -30,6 +37,8 @@ const pageDescription = entry?.data?.description || 'The hobby is great but the 
 <meta property="og:image" content={ogImagePath} />
 <meta property="og:url" content={Astro.url.href} />
 <meta property="og:type" content="website" />
+<meta property="og:site_name" content="Finnish Mechanical Keyboard Community" />
+<meta property="og:locale" content="en_UK" />
 
 <!-- Add your Twitter Card tags -->
 <meta name="twitter:card" content="summary_large_image" />
